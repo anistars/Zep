@@ -1,0 +1,63 @@
+// class Combo {
+//   String name;
+//   int counter1;
+//   Combo({String name, int counter1}) {
+//     this.name = name;
+//     this.counter1 = counter1;
+//   }
+// }
+
+// List<Combo> combos = <Combo>[];
+// List<int> noofcount = <int>[];
+// List<int> noofcount1 = <int>[];
+
+// class Recipt extends StatefulWidget {
+//   @override
+//   _ReciptState createState() => _ReciptState();
+// }
+
+// class _ReciptState extends State<Recipt> {
+//   @override
+//   Widget build(BuildContext context) {
+//     int counter = 0;
+//     List<String> name1 = ModalRoute.of(context).settings.arguments;
+//     print("This is a List of items");
+//     for (var i = 0; i < name1.length; i++) {
+//       counter = 0;
+//       for (var j = i; j < name1.length; j++) {
+//         if (name1[i] == name1[j]) {
+//           counter++;
+//         }
+//       }
+//       noofcount.insert(0, counter - 1);
+//       print(name1[i]);
+//       print(counter);
+//       // combos.insert(0, Combo(name: name1[i], counter1: counter - 1));
+//     }
+//     noofcount.sort((b, a) => a.compareTo(b));
+//     print("Descending");
+//     Set<String> set = new Set<String>.from(name1);
+//     List<String> set1 = set.toList();
+//     noofcount1 = noofcount.sublist(0, set.length);
+//     print(noofcount1);
+//     print(set);
+//     for (var i = 0; i < noofcount1.length; i++) {
+//       if (noofcount1[i] > 0) {
+//         combos.insert(0, Combo(name: set1[i], counter1: noofcount1[i]));
+//       }
+//     }
+//     return Scaffold(
+//         body: ListView.builder(
+//       itemCount: combos.length,
+//       itemBuilder: (context, index) {
+//         return Card(
+//           child: ListTile(
+//             onTap: () {},
+//             title: Text(combos[index].name),
+//             subtitle: Text(combos[index].counter1.toString()),
+//           ),
+//         );
+//       },
+//     ));
+//   }
+// }
